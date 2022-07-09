@@ -1,3 +1,30 @@
+ul{
+list-style-type: none;
+display: justify-content; 
+justify-content:start; 
+}
+h2 {
+color:#5C9DC0
+ }
+.draggable { 
+background-color:#CCC; 
+width: 100px; 
+height: 100px; 
+padding: 0.5em; 
+float: left; 
+margin: 10px 10px 10px 0; 
+}
+
+.droppable { 
+background-color:#0F0; 
+width: 150px; 
+height: 150px; 
+padding: 0.5em; 
+float: left; 
+margin: 10px; 
+}
+
+
 table {
   font-family: sans-serif;
   width: 100%;
@@ -7,17 +34,12 @@ table {
   margin-bottom: 50px;
 }
 table thead tr th {
-  background: #626e7e;
-  color: #d1d5db;
+  background: #878787;
+  color: #EcEcEC;
   padding: 0.5em;
   overflow: hidden;
 }
-table thead tr th:first-child {
-  border-radius: 3px 0 0 0;
-}
-table thead tr th:last-child {
-  border-radius: 0 3px 0 0;
-}
+
 table thead tr th .day {
   display: block;
   font-size: 1.2em;
@@ -29,8 +51,8 @@ table thead tr th .day {
   line-height: 1.8;
 }
 table thead tr th .day.active {
-  background: #d1d5db;
-  color: #626e7e;
+    background: #ECECEC;
+color: #5C9DC0;
 }
 table thead tr th .short {
   display: none;
@@ -40,38 +62,43 @@ table thead tr th i {
   font-size: 2em;
 }
 table tbody tr {
-  background: #d1d5db;
+  background: #ECECEC;
 }
-table tbody tr:nth-child(odd) {
-  background: #c8cdd4;
-}
-table tbody tr:nth-child(4n + 0) td {
-  border-bottom: 1px solid #626e7e;
-}
+
 table tbody tr td {
   text-align: center;
   vertical-align: middle;
-  border-left: 1px solid #626e7e;
+  border-left: 1px solid #5C9DC0;
   position: relative;
   height: 32px;
   cursor: pointer;
 }
-table tbody tr td:last-child {
-  border-right: 1px solid #626e7e;
-}
+
 table tbody tr td.hour {
   font-size: 2em;
   padding: 0;
-  color: #626e7e;
-  background: #fff;
-  border-bottom: 1px solid #626e7e;
+  color: #ECECEC;
+ background: #ECECEC; 
+  border-bottom: 1px solid #5C9DC0;
   border-collapse: separate;
   min-width: 100px;
   cursor: default;
 }
 table tbody tr td.hour span {
   display: block;
+color: #5C9DC0; 
 }
+.addBtn {
+background-color: #5C9DC0;
+border: none; 
+color:#EAEFF9; 
+padding: 15px; 15px; 
+text-align: center; 
+display: inline-block; 
+font-size: 12px; 
+
+}
+
 @media (max-width: 60em) {
   table thead tr th .long {
     display: none;
@@ -99,8 +126,8 @@ table tbody tr td.hour span {
     padding: 5px;
   }
   table thead tr th .day.active {
-    background: #d1d5db;
-    color: #626e7e;
+    background: #ECECEC;
+    color: #5C9DC0;
   }
   table tbody tr td.hour {
     font-size: 1.7em;

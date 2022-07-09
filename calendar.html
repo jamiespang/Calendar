@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
 <link rel="stylesheet" href="calendar.css">
+<script src="calendar.js"></script>
 </head>
 <table>
   <thead>
@@ -53,7 +54,29 @@
   <tbody> 
     <tr>
       <td class="hour" rowspan="4"><span>Weather</span></td>
-      <td></td>
+      <td><!-- the DIV that will contain the widget -->
+<div class="weatherWidget" ></div>
+
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey:"72T59594VAACAFYU75FYC2VXR", //Your personal key
+       location:"Covington, KY USA", //City and State
+       unitGroup:"us", //"us" or "metric"
+       forecastDays:1, //how many days forecast to show
+       title:"Covington,KY", //City to display
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script></td>
       <td></td>
       <td></td>
       <td></td>
@@ -91,13 +114,13 @@
 
     <tr>
       <td class="hour" rowspan="4"><span>Morning</span></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
     </tr>
     <tr>
       <td></td>
@@ -124,17 +147,27 @@
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td><h2>Yard Work</h2> <ul id="Sunday">
+<div class="drag" class="draggable">
+ <li><input type="checkbox" value="true" class="checkbox-drag">Mow the grass</li></div>
+      <div id="draggable" class=""draggable> <li><input type="checkbox" value="true" class="checkbox-drag"> Pull the weeds</li></div>
+<div class="drag" class="draggable">
+ <li><input type="checkbox" value="true" class="checkbox-drag">Water plants</li></div>
+<div class="drag" class="draggable">
+ <li><input type="checkbox" value="true" class="checkbox-drag">Sweep/Clean porch</li></div>
+<div id="droppable" class="droppable"></div>
+        <input type="text" id="myInput" placeholder="Add a chore">
+        <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
     </tr>
     <tr>
       <td class="hour" rowspan="4"><span>Afternoon</span></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="droppable" class="droppable"></div></td>
     </tr>
     <tr>
       <td></td>
@@ -165,10 +198,70 @@
     </tr>
     <tr>
       <td class="hour" rowspan="4"><span>Evening</span></td>
+    <tr><td> <h2>Bathrooms</h2><ul id="Monday">
+<li><input type="checkbox">Clean the sinks</li>
+        <li><input type="checkbox">Clean showers/bathtubs</li>
+<li><input type="checkbox">Clean the toilets</li>
+       <li><input type="checkbox">Clean the mirrors</li>
+<li><input type="checkbox">Sweep/mop floors</li>
+        <li><input type="checkbox">Replace hand towels</li>
+<div id="droppable" class="droppable"></div>
+  <input type="text" id="myInput" placeholder="Add a chore">
+      <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
+    </tr>
+ <tr>
+			<td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+ <tr>
+      <td></td>
+      <td><h2>Kitchen</h2><ul id="Tuesday">
+  <li><input type="checkbox">Clean sink/counters</li>
+        <li><input type="checkbox">Clean showers/bathtubs</li>
+<li><input type="checkbox">Clean table and surfaces</li>
+       <li><input type="checkbox">Clean appliances</li>
+<li><input type="checkbox">Sweep/mop floors</li>
+        <li><input type="checkbox">Replace hand towels</li>
+<li><input type="checkbox">Take out garbage</li>
+<div id="droppable" class="droppable"></div>
+  <input type="text" id="myInput" placeholder="Add a chore">
+      <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
+    </tr></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><h2>Family Room</h2><ul id="Wednesday">
+<li><input type="checkbox">Sweep, mop and vaccuum</li>
+<li><input type="checkbox">Dust tables</li>
+<li><input type="checkbox">Clean windows, mirrors, electronics</li>
+<li><input type="checkbox">Vaccuum couches, mop and vaccuum</li>
+<div id="droppable" class="droppable"></div>
+        <input type="text" id="myInput" placeholder="Add a chore">
+        <span onclick="newElement()" class="addBtn">Add</span></ul></td>
+ </tr></td>
       <td></td>
       <td></td>
       <td></td>
@@ -187,23 +280,27 @@
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td><h2>Laundry</h2>
+    <ul id="Thursday">
+        <label class="container">
+  <span class="checkmark"></span> <input type="checkbox" id="garbage" name="garbage" value="garbage">
+        <label for="garbage">Empty all of the garbage cans</label><br>
+        <input type="checkbox" id="garbage" name="garbage" value="garbage">
+        <label for="garbage">Take the garbage to the curb</label><br>
+        <input type="checkbox" id="donate" name="donate" value="donate">
+        <label for="donate">Donate or toss any unused or broken items</label><br>
+        <input type="checkbox" id="mail" name="mail" value="mail">
+        <label for="mail">Throw away paper clutter and mail</label><br>
+<div id="droppable" class="droppable"></div>
+          <input type="text" id="myInput" placeholder="Add a chore">
+        <span onclick="newElement()" class="addBtn">Add</span></ul></td>
       <td></td>
       <td></td>
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  
-    <tr>
+      <tr>
       <td class="hour" rowspan="4"><span>Completed</span></td>
-      <td></td>
+      <td><h2>Pie Chart<h2>
+<div id="Container"</td>
       <td></td>
       <td></td>
       <td></td>
