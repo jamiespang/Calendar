@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
 <link rel="stylesheet" href="calendar.css">
+
 <script src="calendar.js"></script>
 </head>
+
+<!-- the DIV that will contain the widget -->
 <table>
   <thead>
     <tr>
@@ -64,7 +67,7 @@
        apiKey:"72T59594VAACAFYU75FYC2VXR", //Your personal key
        location:"Covington, KY USA", //City and State
        unitGroup:"us", //"us" or "metric"
-       forecastDays:1, //how many days forecast to show
+       forecastDays:7, //how many days forecast to show
        title:"Covington,KY", //City to display
        showTitle:true, 
        showConditions:true
@@ -76,7 +79,7 @@
    s.setAttribute('data-timestamp', +new Date());
    (d.head || d.body).appendChild(s);
    })();
-</script></td>
+</script></td> 
       <td></td>
       <td></td>
       <td></td>
@@ -114,13 +117,13 @@
 
     <tr>
       <td class="hour" rowspan="4"><span>Morning</span></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
     </tr>
     <tr>
       <td></td>
@@ -148,26 +151,30 @@
       <td></td>
       <td></td>
       <td><h2>Yard Work</h2> <ul id="Sunday">
+<div>
+  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+  <ul id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
 <div class="drag" class="draggable">
  <li><input type="checkbox" value="true" class="checkbox-drag">Mow the grass</li></div>
-      <div id="draggable" class="draggable"> <li><input type="checkbox" value="true" class="checkbox-drag"> Pull the weeds</li></div>
-<div class="drag" class="draggable">
+      <div id="source" class="source"> <li><input type="checkbox" value="true" class="checkbox-drag"> Pull the weeds</li></div>
+<div class="source" class="source">
  <li><input type="checkbox" value="true" class="checkbox-drag">Water plants</li></div>
-<div class="drag" class="draggable">
+<div class="drag" class="source">
  <li><input type="checkbox" value="true" class="checkbox-drag">Sweep/Clean porch</li></div>
-<div id="droppable" class="droppable"></div>
         <input type="text" id="myInput" placeholder="Add a chore">
         <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
     </tr>
+</div>
     <tr>
       <td class="hour" rowspan="4"><span>Afternoon</span></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
-      <td><div id="droppable" class="droppable"></div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
     </tr>
     <tr>
       <td></td>
@@ -210,13 +217,13 @@
       <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
     </tr>
  <tr>
-			<td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+			<td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
+      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
     </tr>
  <tr>
       <td></td>
@@ -300,7 +307,7 @@
       <tr>
       <td class="hour" rowspan="4"><span>Completed</span></td>
       <td><h2>Pie Chart<h2>
-<div class="Container"</td>
+<div class="Container" </td>
       <td></td>
       <td></td>
       <td></td>
