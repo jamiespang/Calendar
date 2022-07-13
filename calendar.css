@@ -1,3 +1,19 @@
+
+div {
+  margin: 0em;
+  padding: 2em;
+}
+
+#source {
+  color: blue;
+  border: 1px solid black;
+}
+
+#target {
+  border: 1px solid black;
+}
+Copy to Clipboard
+Result
 ul{
 list-style-type: none;
 display: justify-content; 
@@ -6,6 +22,8 @@ justify-content:start;
 h2 {
 color:#5C9DC0
  }
+
+/**
 .draggable { 
 background-color:#CCC; 
 width: 100px; 
@@ -24,6 +42,7 @@ float: left;
 margin: 5px; 
 }
 
+/*/
 
 table {
   font-family: sans-serif;
