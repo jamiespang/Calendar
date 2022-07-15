@@ -152,18 +152,21 @@
       <td></td>
       <td><h2>Yard Work</h2> <ul id="Sunday">
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
-  <ul id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">
- <li><input type="checkbox" value="true" class="checkbox-drag">Mow the grass</li></div>
-      <div id="source" class="source"> <li><input type="checkbox" value="true" class="checkbox-drag"> Pull the weeds</li></div>
-<div class="source" class="source">
- <li><input type="checkbox" value="true" class="checkbox-drag">Water plants</li></div>
-<div class="drag" class="source">
- <li><input type="checkbox" value="true" class="checkbox-drag">Sweep/Clean porch</li></div>
-        <input type="text" id="myInput" placeholder="Add a chore">
-        <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
+
+  <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Pull the weeds</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Water plants</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Mow the grass</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Pull the weeds</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Sweep/Clean porch</div>
+<input type="text" id="myInput" placeholder="Add New Item">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
     </tr>
 </div>
     <tr>
@@ -206,15 +209,21 @@
     <tr>
       <td class="hour" rowspan="4"><span>Evening</span></td>
     <tr><td> <h2>Bathrooms</h2><ul id="Monday">
-<li><input type="checkbox">Clean the sinks</li>
-        <li><input type="checkbox">Clean showers/bathtubs</li>
-<li><input type="checkbox">Clean the toilets</li>
-       <li><input type="checkbox">Clean the mirrors</li>
-<li><input type="checkbox">Sweep/mop floors</li>
-        <li><input type="checkbox">Replace hand towels</li>
-<div id="droppable" class="droppable"></div>
-  <input type="text" id="myInput" placeholder="Add a chore">
-      <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
+  <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Clean sinks</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Clean shower</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Clean toilets</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Clean mirrors</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Sweep/mop floors</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Replace towels</div>
+<input type="text" id="myInput" placeholder="Add New Item">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
     </tr>
  <tr>
 			<td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
@@ -228,16 +237,22 @@
  <tr>
       <td></td>
       <td><h2>Kitchen</h2><ul id="Tuesday">
-  <li><input type="checkbox">Clean sink/counters</li>
-        <li><input type="checkbox">Clean showers/bathtubs</li>
-<li><input type="checkbox">Clean table and surfaces</li>
-       <li><input type="checkbox">Clean appliances</li>
-<li><input type="checkbox">Sweep/mop floors</li>
-        <li><input type="checkbox">Replace hand towels</li>
-<li><input type="checkbox">Take out garbage</li>
-<div id="droppable" class="droppable"></div>
-  <input type="text" id="myInput" placeholder="Add a chore">
-      <span onclick="newElement()" class="addBtn">Add</span></ul</td></td>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Clean sinks/counters</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable"> Clean table/surfaces</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Clean appliances</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Sweep/mop floors</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Replace hand towels</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Take out the garbage</div>
+<input type="text" id="myInput" placeholder="Add New Item">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+</td>
     </tr></td>
       <td></td>
       <td></td>
@@ -261,13 +276,18 @@
       <td></td>
       <td></td>
       <td><h2>Family Room</h2><ul id="Wednesday">
-<li><input type="checkbox">Sweep, mop and vaccuum</li>
-<li><input type="checkbox">Dust tables</li>
-<li><input type="checkbox">Clean windows, mirrors, electronics</li>
-<li><input type="checkbox">Vaccuum couches, mop and vaccuum</li>
-<div id="droppable" class="droppable"></div>
-        <input type="text" id="myInput" placeholder="Add a chore">
-        <span onclick="newElement()" class="addBtn">Add</span></ul></td>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Sweep & Mop/Vaccuum appliances</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Dust tables</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Clean windows, mirrors & elebronics</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Clean couches</div>
+<input type="text" id="myInput" placeholder="Add New Item">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+</td>
  </tr></td>
       <td></td>
       <td></td>
@@ -289,18 +309,15 @@
       <td></td>
       <td><h2>Laundry</h2>
     <ul id="Thursday">
-        <label class="container">
-  <span class="checkmark"></span> <input type="checkbox" id="garbage" name="garbage" value="garbage">
-        <label for="garbage">Empty all of the garbage cans</label><br>
-        <input type="checkbox" id="garbage" name="garbage" value="garbage">
-        <label for="garbage">Take the garbage to the curb</label><br>
-        <input type="checkbox" id="donate" name="donate" value="donate">
-        <label for="donate">Donate or toss any unused or broken items</label><br>
-        <input type="checkbox" id="mail" name="mail" value="mail">
-        <label for="mail">Throw away paper clutter and mail</label><br>
-<div id="droppable" class="droppable"></div>
-          <input type="text" id="myInput" placeholder="Add a chore">
-        <span onclick="newElement()" class="addBtn">Add</span></ul></td>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Empty garbage cans</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Take garbage to curb</div>
+ <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+<div class="drag" class="draggable">Wash, fold and put away clothes</div>
+<input type="text" id="myInput" placeholder="Add New Item">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
       <td></td>
       <td></td>
     </tr>
