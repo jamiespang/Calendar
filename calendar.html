@@ -1,63 +1,146 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
-<link rel="stylesheet" href="calendar.css">
-
-<script src="calendar.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="calendar.css" />
+ <script src="calendar.js"></script>
+  <title>Work Day Scheduler - Challenge 5: Third-Party APIs </title>
 </head>
+ <!-- Header -->
+  <header class="jumbotron">
+    <h1 class="display-3">Daily Planner</h1>
+    <p class="lead">A simple daily calendar planning your day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+<body>
+<div class="split screen">
+<div class="centered"></div>
+<div class="left"></div>
+<h2>Notes/Misc</h2>
+</div>
+</div>
+
+  <div class="right">
+    <!-- Timeblocks start here -->
+  <div id="hour8" class="row time-block">
+            <div class="col-md-1 hour">
+                7 AM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour7" class="row time-block">
+            <div class="col-md-1 hour">
+                8 AM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour9" class="row time-block">
+            <div class="col-md-1 hour">
+                9 AM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour10" class="row time-block">
+            <div class="col-md-1 hour">
+                10 AM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour10=1" class="row time-block">
+            <div class="col-md-1 hour">
+                11 AM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour12" class="row time-block">
+            <div class="col-md-1 hour">
+                12 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour13" class="row time-block">
+            <div class="col-md-1 hour">
+                1 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour14" class="row time-block">
+            <div class="col-md-1 hour">
+                2 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour15" class="row time-block">
+            <div class="col-md-1 hour">
+                3 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour16" class="row time-block">
+            <div class="col-md-1 hour">
+                4 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+    <div id="hour17" class="row time-block">
+            <div class="col-md-1 hour">
+                5 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+  <div id="hour18" class="row time-block">
+            <div class="col-md-1 hour">
+                6 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+  <div id="hour19" class="row time-block">
+            <div class="col-md-1 hour">
+                7 PM
+            </div>
+            <textarea class="col-md-10 description">
+            </textarea>
+            <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
 
 <!-- the DIV that will contain the widget -->
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>
-        <span class="day">4</span>
-        <span class="long">Monday</span>
-        <span class="short">Mon</span>
-
-      </th>
-      <th>
-        <span class="day">5</span>
-        <span class="long">Tuesday</span>
-        <span class="short">Tue</span>
-      </th>
-      <th>
-        <span class="day active">6</span>
-        <span class="long">Wednesday</span>
-        <span class="short">We</span>
-      </th>
-      <th>
-        <span class="day">7</span>
-        <span class="long">Thursday</span>
-        <span class="short">Thur</span>
-      </th>
-      <th>
-        <span class="day">8</span>
-        <span class="long">Friday</span>
-        <span class="short">Fri</span>
-      </th>
-      <th>
-        <span class="day">9</span>
-        <span class="long">Saturday</span>
-        <span class="short">Sat</span>
-      </th>
-      <th>
-        <span class="day">10</span>
-        <span class="long">Sunday</span>
-        <span class="short">Sun</span>
-      </th>
-    </tr>
-  </thead>
-  <tbody> 
-    <tr>
-      <td class="hour" rowspan="4"><span>Weather</span></td>
-      <td><!-- the DIV that will contain the widget -->
 <div class="weatherWidget" ></div>
 
 <script>
@@ -67,7 +150,7 @@
        apiKey:"72T59594VAACAFYU75FYC2VXR", //Your personal key
        location:"Covington, KY USA", //City and State
        unitGroup:"us", //"us" or "metric"
-       forecastDays:7, //how many days forecast to show
+       forecastDays:1, //how many days forecast to show
        title:"Covington,KY", //City to display
        showTitle:true, 
        showConditions:true
@@ -79,322 +162,56 @@
    s.setAttribute('data-timestamp', +new Date());
    (d.head || d.body).appendChild(s);
    })();
-</script></td> 
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+</script>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
 
-    <tr>
-      <td class="hour" rowspan="4"><span>Morning</span></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><h2>Yard Work</h2> <ul id="Sunday">
-<div>
+<p id="demo"></p>
 
-  <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Pull the weeds</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Water plants</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Mow the grass</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Pull the weeds</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Sweep/Clean porch</div>
-<input type="text" id="myInput" placeholder="Add New Item">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
+<p>Countdown until VACATION!</p>
+<img src= "beach.svg">
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 5, 2022 12:00:00").getTime();
 
-    </tr>
-</div>
-    <tr>
-      <td class="hour" rowspan="4"><span>Afternoon</span></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td class="hour" rowspan="4"><span>Evening</span></td>
-    <tr><td> <h2>Bathrooms</h2><ul id="Monday">
-  <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Clean sinks</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Clean shower</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Clean toilets</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Clean mirrors</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Sweep/mop floors</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Replace towels</div>
-<input type="text" id="myInput" placeholder="Add New Item">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
-    </tr>
- <tr>
-			<td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
-      <td><div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div></td></td>
-    </tr>
- <tr>
-      <td></td>
-      <td><h2>Kitchen</h2><ul id="Tuesday">
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Clean sinks/counters</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable"> Clean table/surfaces</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Clean appliances</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Sweep/mop floors</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Replace hand towels</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Take out the garbage</div>
-<input type="text" id="myInput" placeholder="Add New Item">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
-</td>
-    </tr></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><h2>Family Room</h2><ul id="Wednesday">
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Sweep & Mop/Vaccuum appliances</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Dust tables</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Clean windows, mirrors & elebronics</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Clean couches</div>
-<input type="text" id="myInput" placeholder="Add New Item">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
-</td>
- </tr></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><h2>Laundry</h2>
-    <ul id="Thursday">
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Empty garbage cans</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Take garbage to curb</div>
- <li id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-<div class="drag" class="draggable">Wash, fold and put away clothes</div>
-<input type="text" id="myInput" placeholder="Add New Item">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
-      <td></td>
-      <td></td>
-    </tr>
-      <tr>
-      <td class="hour" rowspan="4"><span>Completed</span></td>
-      <td><h2>Pie Chart<h2>
-<div class="Container" </td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-   
-      <td class="hour" rowspan="4"><span>Notes/Misc</span></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "VACATION!";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+  
