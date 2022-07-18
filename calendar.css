@@ -1,24 +1,35 @@
+
 /*Split screen in half*/
-.split {
+.split, 
+.right {
+float: right; 
 height:100%; 
 width:50%; 
-position:fixed; 
-z-index: 1; 
-top: 0; 
-overflow-x:hidden; 
 padding-top: 20px; 
 }
 
-/*Left side*/
-.left {
-  left: 0;
+.parent {
+height: 100%;
+width: 100%;
+position: relative;
+}
+.child, .beach {
+float: left; 
+width: 25%;
+height: 25%;
+position: absolute;
+}
+.weatherWidget {
+float:left; 
+height: 50%; 
+width: 50%; 
+position: absolute; 
+}
+p {
+  font-size: 20px;
+ 
 }
 
-/* Right side */
-.right {
-  right: 0;
-  background-color:#BEBEBE; 
-}
 
 /* Center horizontally and vertically */
 .centered {
@@ -44,7 +55,7 @@ textarea {
   padding: 10px;
 }
 
-.jumbotron {
+.header {
   text-align: center;
   background-color: transparent;
   color: black;
@@ -57,8 +68,8 @@ textarea {
 }
 
 .time-block {
-  text-align: center;
-  border-radius: 15px;
+  text-align: right;
+  border-radius: 10px;
 }
 
 .row {
@@ -128,6 +139,7 @@ textarea {
 div {
   margin: 0em;
   padding: 2em;
+
 }
 
 #source {
