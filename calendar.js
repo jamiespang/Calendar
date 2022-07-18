@@ -1,5 +1,11 @@
 
 // Display today's day and date
+const event = new Date();
+const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+
+console.log(toLocaleDateString(options));
+
+
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 $(document).ready(function () {
@@ -8,7 +14,6 @@ $(document).ready(function () {
         // Get nearby values of the description in JQuery
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
-
         // Save text in local storage
         localStorage.setItem(time, text);
     })
@@ -16,11 +21,9 @@ $(document).ready(function () {
     function timeTracker() {
         //get current number of hours.
         var timeNow = moment().hour();
-
         // loop over time blocks
         $(".time-block").each(function () {
             var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-
             // To check the time and add the classes for background indicators
             if (blockTime < timeNow) {
                 $(this).removeClass("future");
@@ -36,7 +39,6 @@ $(document).ready(function () {
                 $(this).removeClass("present");
                 $(this).removeClass("past");
                 $(this).addClass("future");
-
             }
         })
     }
@@ -87,3 +89,74 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "VACATION!";
   }
 }, 1000);
+
+// saveBtn click listener 
+    $(".saveBtn").on("click", function () {
+        // Get nearby values of the description in JQuery
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+
+        // Save text in local storage
+        localStorage.setItem(time, text);
+    })
+   
+    function timeTracker() {
+        //get current number of hours.
+        var timeNow = moment().hour();
+
+// To Do-Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName ==='LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+

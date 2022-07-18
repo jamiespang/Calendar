@@ -5,32 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="calendar.css">
  <script src="calendar.js"></script>
-  <title>Work Day Scheduler - Challenge 5: Third-Party APIs </title>
+  <title>Work Day Scheduler</title>
 </head>
+
  <!-- Header -->
   <header class="header">
-    <h1 class="display-3">Daily Planner</h1>
-    <p class="lead">A simple daily calendar planning your day</p>
-    <p id="currentDay" class="lead"></p>
-<!-- Display today's day and date -->
-<script>
-var todayDate = moment().format('dddd, MMM Do YYYY');
-$("#currentDay").html(todayDate);
-</script>
-
+    <h1>Daily Planner</h1>
+    <p>A simple daily calendar planning your day</p>
+   
   </header>
-<body>
-<div class="parent"></div>
+
+<aside>
 <!-- the DIV that will contain the widget -->
-
 <div class="weatherWidget"></div>
-
 <script>
    window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
    window.weatherWidgetConfig.push({
@@ -52,11 +41,9 @@ $("#currentDay").html(todayDate);
    })();
 </script>
 
-<div class="child"></div>
-<div class="beach">
+<div class="vacation">
 <p>Countdown until VACATION!</p>
-<img src= "beach.svg" height="25%" width="25%"></div>
-<p id="demo"></p>
+<img src="palmtree.gif" height="25%" width="25%"></div>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Aug 13, 2022 00:00:00").getTime();
@@ -87,10 +74,32 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
+</div>
+<div id="todo">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Add item...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
 
+<ul id="myUL">
+  <li>Run 3 miles</li>
+  <li>Pay bills</li>
+  <li>Lunch with Terry</li>
+  <li>Stop at the store</li>
+  <li>Make dinner</li>
+ 	<li>Clean a room</li>
+  <li>Read 50 pages</li>
+  <li>Take kids to football</li>
+</ul>
+</div>
+
+<div class="graph"></div>
+</aside>
+<body>
+ <div class="right"></div>
+<div class="calendar"></div>
     <!-- Timeblocks start here -->
-  <div class="right">
-  <div id="hour8" class="row time-block">
+   <div id="hour8" class="row time-block">
             <div class="col-md-1 hour">
                 7 AM
             </div>
@@ -195,8 +204,6 @@ var x = setInterval(function() {
             <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
+</div>
 </body>
 </html>  
