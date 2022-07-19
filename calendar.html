@@ -14,7 +14,12 @@
   <header class="header">
     <h1>Daily Planner</h1>
     <p>A simple daily calendar planning your day</p>
-   
+   <!--Date-->
+<script>
+var today= new Date(); 
+var dd = today.getDate();
+console.log(today);
+</script>
   </header>
 
 <aside>
@@ -43,6 +48,7 @@
 
 <div class="vacation">
 <p>Countdown until VACATION!</p>
+<p id="demo"></p>
 <img src="palmtree.gif" height="25%" width="25%"></div>
 <script>
 // Set the date we're counting down to
@@ -70,7 +76,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "VACATION!!!";
   }
 }, 1000);
 </script>
