@@ -1,11 +1,4 @@
 
-// Display today's day and date
-const event = new Date();
-const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-
-console.log(toLocaleDateString(options));
-
-
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 $(document).ready(function () {
@@ -159,4 +152,4 @@ function newElement() {
     }
   }
 }
-
+		}	

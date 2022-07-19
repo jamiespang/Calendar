@@ -14,11 +14,11 @@
   <header class="header">
     <h1>Daily Planner</h1>
     <p>A simple daily calendar planning your day</p>
-   <!--Date-->
-<script>
-var today= new Date(); 
-var dd = today.getDate();
-console.log(today);
+<p id="date"></p>
+<!--Date-->
+   <script>
+const d = new Date(); 
+document.getElementById("date").innerHTML =d; 
 </script>
   </header>
 
