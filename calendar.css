@@ -40,13 +40,14 @@ ul li:nth-child(odd) {
 
 /* Darker background-color on hover */
 ul li:hover {
-  background: #ddd;
+  background: #888;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+li.checked {
   background: #888;
-  color: #fff;
+  color: #06aed5
+;
   text-decoration: line-through;
 }
 
@@ -54,7 +55,7 @@ ul li.checked {
 ul li.checked::before {
   content: '';
   position: absolute;
-  border-color: #fff;
+  border-color: #06aed5;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -63,16 +64,7 @@ ul li.checked::before {
   height: 15px;
   width: 7px;
 }
-.far{
-position:absolute; 
-right:0; 
-top:0; 
-padding:12px 16 px 12 px 16 px; 
-}
-.far:hover {
-background-color:red; 
-color: white; 
-}
+
 .myInput{
 border-color:#06aed5; 
 }
@@ -84,19 +76,6 @@ border-color:#06aed5;
   padding: 12px 16px 12px 16px;
 }
 
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: #f44336;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
 /* Clear floats after the header */
 .header:after {
   content: "";
@@ -105,7 +84,7 @@ border-color:#06aed5;
 }
 
 /* Style the input for to do list */
-input {
+.input {
   margin-right: 0;
   border: 10px; 
   border-radius: 0;
@@ -121,7 +100,7 @@ border-color:#06aed5;
 width:25%; 
 padding:10px; 
 margin-left:0; 
-background: #d9d9d9;
+background: #06aed5;
 color: #555;
 text-align: center;
 font-size: 16px;
