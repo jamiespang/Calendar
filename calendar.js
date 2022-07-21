@@ -1,4 +1,4 @@
-
+/*
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 $(document).ready(function () {
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     timeTracker();
 })
-
+*/
 // Set the date we're counting down to
 var countDownDate = new Date("Aug 5, 2022 12:00:00").getTime();
 
@@ -96,4 +96,18 @@ var x = setInterval(function() {
     function timeTracker() {
         //get current number of hours.
         var timeNow = moment().hour();
-
+		}
+var contacts = [
+{
+	name: "Jamie", 
+email: "jamie.spang@test.test"
+}, {
+name: "Sara", 
+email: "sara.smith@test.test"
+}]; 
+$(function(){
+	$.each(contacts, function(index, value){
+	$('#example').append(''+value.name+'<br>'); 
+	console.log(index); 
+	}); 
+}); 
