@@ -8,23 +8,30 @@ header{
 color:black; 
 }
 
-aside,.vacation,.weatherWidget,.todo,.myUL{
-display:flex row; 
+.container {
+display:flex; 
+flex-direction: row;
+justify-content: center;
+}
+
+.vacation,.weatherWidget, .todo {
 left:auto; 
 height:auto; 
-width: 50%; 
+width: 25%; 
 }
 
 /* Style the list items on to do list */
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
-list-style-type:none; 
+  padding: 12px 8px 12px 16px;
+ list-style-type:none; 
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
 font-family: Verdana, Geneva, Tahoma, sans-serif; 
+display:flex; 
+width:25%; 
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -65,8 +72,17 @@ ul li.checked::before {
   width: 7px;
 }
 
-.myInput{
-border-color:#06aed5; 
+#myInput {
+border-color:#06aed5
+background-color:transparent;
+border: none; 
+color:#06aed5; 
+padding: 15px; 15px; 
+text-align: center; 
+display: inline-block; 
+font-size: 12px; 
+width:12%; 
+
 }
 /* Style the close button */
 .close {
@@ -83,21 +99,11 @@ border-color:#06aed5;
   clear: both;
 }
 
-/* Style the input for to do list */
-.input {
-  margin-right: 0;
-  border: 10px; 
-  border-radius: 0;
-border-color:#06aed5; 
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
+
 
 /* Style the "Add" button for to do list */
 .addBtn {
-width:25%; 
+width:10%; 
 padding:10px; 
 margin-left:0; 
 background: #06aed5;

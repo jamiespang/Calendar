@@ -13,10 +13,11 @@
   <title>Work Day Scheduler</title>
 </head>
 <body>
+
  <!-- Header -->
   <header class="header">
     <h1>Daily Planner</h1>
-    <p>A simple daily calendar planning your day</p>
+
 <p id="date"></p>
 <!--Date-->
    <script>
@@ -25,9 +26,10 @@ document.getElementById("date").innerHTML =d;
 </script>
   </header>
 
-<aside>
-<!-- the DIV that will contain the widget -->
-<div class="weatherWidget"></div>
+<div class="container">
+  
+<div class="weatherWidget">
+<p>"Today's Forecast"</p></div>
 <script>
    window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
    window.weatherWidgetConfig.push({
@@ -82,8 +84,8 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "VACATION!!!";
   }
 }, 1000);
-</script>
-</div>
+</script> 
+    <div class="todo">
    <!-- <div id="todo">-->
   <h2>My To Do List</h2>
   <input type="text" id="myInput" placeholder="Add item...">
@@ -101,12 +103,8 @@ var x = setInterval(function() {
 </ul>
 <script src=todo.js></script>
 </div>
-
-</aside>
-
-<div id="example"></div>
- <div class="right"></div>
-<div class="calendar"></div>
+</div>
+<div class= "Schedule"></div>
     <!-- Timeblocks start here -->
    <div id="hour8" class="row time-block">
             <div class="col-md-1 hour">
@@ -208,10 +206,11 @@ var x = setInterval(function() {
             <div class="col-md-1 hour">
                 7 PM
             </div>
-            <textarea class="col-md-10 description">
+<textarea class="col-md-10 description">
             </textarea>
             <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
+          
   </div>
 </div>
 </body>

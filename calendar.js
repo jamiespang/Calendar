@@ -100,10 +100,24 @@ var x = setInterval(function() {
 var contacts = [
 {
 	name: "Jamie", 
-email: "jamie.spang@test.test"
+email: "jamie.spang@test.test", 
+phone: "859-555-0123"
 }, {
 name: "Sara", 
-email: "sara.smith@test.test"
+email: "sara.smith@test.test", 
+phone: "859-555-0124"
+}, {
+name: "Savanna", 
+email: "savanna.barnes@test.test", 
+phone: "859-555-0125"
+}, {
+name: "Jake", 
+email: "jake.miles@test.test", 
+phone: "859-555-0126"
+}, {
+name: "David", 
+email: "david.bates@test.test", 
+phone: "859-555-0127"
 }]; 
 $(function(){
 	$.each(contacts, function(index, value){
