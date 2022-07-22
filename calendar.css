@@ -2,9 +2,10 @@
 margin:0; 
 padding:0; 
 box-sizing:border-box; 
+/*background-image: url("pastel.jpg"); */
 }
 
-header{
+header {
 color:black; 
 }
 
@@ -134,6 +135,24 @@ height:auto;
 width: 50%; 
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-row: 1 / span 4;
+}
 .calendar {
 display:flex; 
 right:fixed; 
