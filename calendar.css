@@ -172,10 +172,6 @@ body {
   border-bottom: 10px solid black;
 }
 
-.description {
-  white-space: pre-wrap;
-}
-
 .time-block {
   text-align: right;
   border-radius: 10px;
@@ -192,22 +188,6 @@ body {
   color: #000000;
   border-top: 1px dashed #000000;
   }
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
 
 .saveBtn {
   border-left: 1px solid black;
@@ -248,16 +228,6 @@ div {
 
 }
 
-#source {
-  color: #5C9DC0;
- 
-}
-
-#target {
-  border: 1px solid #5C9DC0;
-background-color: #EAEFF9
-}
-
 ul{
 list-style-type: none;
 display: justify-content; 
@@ -266,24 +236,6 @@ justify-content:start;
 h2 {
 color:#5C9DC0
  }
-
-.draggable { 
-background-color:#CCC; 
-width: 100px; 
-height: 100px; 
-padding: 0.5em; 
-float: left; 
-margin: 10px 10px 10px 0; 
-}
-
-.droppable { 
-background-color:rgb(0, 174, 255); 
-width: 50px; 
-height: 50px; 
-padding: 0.5em; 
-float: left; 
-margin: 5px; 
-}
 
 .addBtn {
 background-color: #5C9DC0;
