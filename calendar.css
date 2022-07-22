@@ -11,13 +11,19 @@ color:black;
 .container {
 display:flex; 
 flex-direction: row;
-justify-content: center;
+justify-content:space-evenly; 
 }
 
-.vacation,.weatherWidget, .todo {
+.vacation,.weatherWidget,{
 left:auto; 
 height:auto; 
 width: 25%; 
+}
+
+.todo {
+left:auto; 
+height:auto; 
+width: 80%; 
 }
 
 /* Style the list items on to do list */
@@ -182,9 +188,10 @@ body {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #white;
   color: #000000;
   border-top: 1px dashed #000000;
+  }
 }
 
 .past {
@@ -221,10 +228,6 @@ body {
   .row {
     height: auto;
     margin-top: 20px;
-  }
-
-  .hour {
-    padding-right: 17%;
   }
 
   .saveBtn {
