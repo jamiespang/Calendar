@@ -44,7 +44,7 @@ var x = setInterval(function() {
 		}
 var contacts = [
 {
-	name: "Jamie", 
+name: "Jamie", 
 email: "jamie.spang@test.test", 
 phone: "859-555-0123"
 }, {
