@@ -42,7 +42,7 @@ var x = setInterval(function() {
         //get current number of hours.
         var timeNow = moment().hour();
 		}
-var contacts = [
+/*var contacts = [
 {
 name: "Jamie", 
 email: "jamie.spang@test.test", 
@@ -69,4 +69,13 @@ $(function(){
 	$('#example').append(''+value.name+'<br>'); 
 	console.log(index); 
 	}); 
-}); 
+});*/
+
+//Contact Array
+const ArraySara = ['Sara Smith', "sara.smith@test.test","859-555-0124"]; 
+const ArrayJake = ['Jake Miles', "jake.miles@test.test","859-555-0126"]; 
+const ArraySavanna = ['Savanna Barnes', "savanna.barnes@test.test","859-555-0125"]; 
+const ArrayDavid = ['David Bates', "david.bates@test.test","859-555-0127"]; 
+
+
+
