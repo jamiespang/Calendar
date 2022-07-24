@@ -240,10 +240,17 @@ body {
 	text-align: center;
 	font-size: 20px;
 }
-
 /*** OVERWRITE - MEDIA QUERY FOR TABLETS AND SMALLER  ***/
-/* This will be applied on any screen 768px and bellow */
-@media screen and (max-width: 768px), screen and (max-width: 575px) {
+/* This will be applied on any screen 1323 to 768*/
+@media screen and (max-width: 1323px) {
+
+
+.container {
+display:grid; 
+grid-template-columns: (repeat 2)
+grid-template-rows: (repeat 2)
+}
+
   .row {
     height: auto;
     margin-top: 20px;
@@ -286,3 +293,19 @@ display: inline-block;
 font-size: 12px; 
 
 }
+
+/*** OVERWRITE - MEDIA QUERY FOR TABLETS AND SMALLER  ***/
+/* This will be applied on any screen 768px and bellow */
+@media screen and (max-width: 768px) {
+
+
+.container {
+display:flex; 
+flex-direction: column;
+justify-content:space-evenly; 
+}
+
+  .row {
+    height: auto;
+    margin-top: 20px;
+  }
