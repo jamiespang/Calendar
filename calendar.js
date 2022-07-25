@@ -75,7 +75,7 @@ $(function(){
 const ArraySara = ['Sara Smith', "sara.smith@test.test","859-555-0124"]; 
 const ArrayJake = ['Jake Miles', "jake.miles@test.test","859-555-0126"]; 
 const ArraySavanna = ['Savanna Barnes', "savanna.barnes@test.test","859-555-0125"]; 
-var David = ['David Bates', "david.bates@test.test","859-555-0127"]; 
-
+const ArrayDavid = ['David Bates', "david.bates@test.test","859-555-0127"]; 
+const ArrayDoctor= ['Independence Primary Care', "859-555-1111"]
 
 
