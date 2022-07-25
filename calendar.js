@@ -42,34 +42,6 @@ var x = setInterval(function() {
         //get current number of hours.
         var timeNow = moment().hour();
 		}
-/*var contacts = [
-{
-name: "Jamie", 
-email: "jamie.spang@test.test", 
-phone: "859-555-0123"
-}, {
-name: "Sara", 
-email: "sara.smith@test.test", 
-phone: "859-555-0124"
-}, {
-name: "Savanna", 
-email: "savanna.barnes@test.test", 
-phone: "859-555-0125"
-}, {
-name: "Jake", 
-email: "jake.miles@test.test", 
-phone: "859-555-0126"
-}, {
-name: "David", 
-email: "david.bates@test.test", 
-phone: "859-555-0127"
-}]; 
-$(function(){
-	$.each(contacts, function(index, value){
-	$('#example').append(''+value.name+'<br>'); 
-	console.log(index); 
-	}); 
-});*/
 
 //Contact Array
 const ArraySara = ['Sara Smith', "sara.smith@test.test","859-555-0124"]; 
