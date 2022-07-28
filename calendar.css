@@ -2,11 +2,15 @@
 margin:0; 
 padding:0; 
 box-sizing:border-box; 
-/*background-image: url("pastel.jpg"); */
+font-family: 'Lobster Two', cursive;
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 header {
 color:black; 
+font-family: 'Lobster Two', cursive;
+
+
 }
 
 .container {
@@ -19,12 +23,15 @@ justify-content:space-evenly;
 left:auto; 
 height:auto; 
 width: 25%; 
+border:2px; white; 
 }
 
 .todo {
 left:auto; 
 height:auto; 
 width: 80%; 
+font-family: 'Lobster Two', cursive;
+
 }
 
 /* Style the list items on to do list */
@@ -36,7 +43,6 @@ ul li {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
-font-family: Verdana, Geneva, Tahoma, sans-serif; 
 display:flex; 
 width:25%; 
 
@@ -120,7 +126,6 @@ font-size: 16px;
 cursor: pointer;
 transition: 0.3s;
 border-radius: 0px;
-font-family:Verdana, Geneva, Tahoma, sans-serif; 
 font-weight:bold; 
 }
 
@@ -172,7 +177,6 @@ font-size: 20px;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -249,6 +253,8 @@ body {
 display:grid; 
 grid-template-columns: (repeat 2)
 grid-template-rows: (repeat 2)
+background-color:pu; 
+
 }
 
   .row {
@@ -267,10 +273,16 @@ grid-template-rows: (repeat 2)
     border: 0;
   }
 }
+div.container {
+background-color:#023047; 
 
+
+}
 div {
   margin: 0em;
   padding: 2em;
+
+
 
 }
 
