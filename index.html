@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="calendar.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+ <script src="calendar.js"></script>
+ <script src="todo.js"></script>
+
+<!--Script for drag and drop-->
+ <script>
+    function droppoint(event) {
+        var data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+        event.preventDefault();
+    }
+ 
+    function allowDropOption(event) {
+        event.preventDefault();
+    }
+ 
+    function dragpoint(event) {
+        event.dataTransfer.setData("Text", event.target.id);
+    }
+    </script>
+
+  <title>Work Day Scheduler</title>
+</head>
+<body>
+
+ <!-- Header -->
+  <header class="header">
+    <h1>Daily Planner</h1>
+
+<p id="date"></p>
+<!--Date-->
+   <script>
+const d = new Date(); 
+document.getElementById("date").innerHTML =d; 
+</script>
+  </header>
+
+<div class="container">
+  
+<div class="weatherWidget">
+<p>"Today's Forecast"</p></div>
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey:"72T59594VAACAFYU75FYC2VXR", //Your personal key
+       location:"Covington, KY USA", //City and State
+       unitGroup:"us", //"us" or "metric"
+       forecastDays:1, //how many days forecast to show
+       title:"Covington,KY", //City to display
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
+
+<div class="vacation">
+<p>Countdown until VACATION!</p>
+<p id="demo"></p>
+<img src="palmtree.gif" height="60%" width="75%"></div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 13, 2022 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "VACATION!!!";
+  }
+}, 1000);
+</script> 
+    <div class="todo">
+   <!-- <div id="todo">-->
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Add item...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+
+<ul id="myUL">
+<li>Run 3 miles</li>
+<li>Pay bills</li>
+<li>Lunch with Terry</li>
+<li>Stop at the store</li>
+<li>Make dinner</li>
+<li>Clean a room</li>
+<li>Read 50 pages</li>
+<li>Take kids to football</li>
+</ul>
+<script src=todo.js></script>
+</div>
+</div>
+ 
+<div class="grid-container">
+
+  <div class="hour7">7:00 AM<h3><div class="dropbox" ondrop="droppoint(event)" ondragover="allowDropOption(event)"></h3></div>
+  <div class="hour8">8:00 AM<h3><div class="dropbox" ondrop="droppoint(event)" ondragover="allowDropOption(event)"></h3></div>
+  <div class="hour9">9:00 AM<h3><p id="drag1" draggable="true" ondragstart="dragpoint(event)">Meeting with Sara<button type="button"onclick= alert(ArraySara)>Contact Info</button></h3></p></div>
+  <div class="hour10">10:00 AM<h3><div class="dropbox" ondrop="droppoint(event)" ondragover="allowDropOption(event)"></h3></div>
+  <div class="hour11">11:00 AM<h3>Meeting with Jake<button type="button" onclick= alert(ArrayJake)>Contact Info</button></h3></div>
+  <div class="hour12">12:00 PM<h3>Lunch</h3></div>
+  <div class="hour13">1:00 PM<h3></div>
+  <div class="hour14">2:00 PM<h3><h3>Review with David<button type="button" onclick= alert(ArrayDavid)>Contact Info</button></h3></div>
+  <div class="hour15">3:00 PM<h3>Project work with Savanna<button type="button" onclick= alert(ArraySavanna)>Contact Info</button></h3></div>
+  <div class="hour16">4:00 PM<h3>Doctor's appointment<button type="button" onclick= alert(ArrayDoctor)>Contact Info</button></h3></div>
+  <div class="hour17">5:00 PM<h3><div class="dropbox" ondrop="droppoint(event)" ondragover="allowDropOption(event)"></h3></div>
+  <div class="hour18">6:00 PM</div>
+	<div class="hour19">7:00 PM</div>
+ <div class="hour20">8:00 PM</div> 
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+</body>
+</html>  
